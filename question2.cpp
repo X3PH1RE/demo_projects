@@ -21,7 +21,7 @@ int main() {
         std::cout << "Enter the time interval of the particle in seconds: ";        //gets the time interval of particle
         std::cin >> t;
     
-        r = d * (3.1415 / 180);                                                     //converts degrees into radians
+        r = d * (M_PI / 180);                                                     //converts degrees into radians
     
         x = x + v * cos(r) * t;                                                     //finds the x coordainate with the help of the horizontal component of the velocity
         y = y + v * sin(r) * t;                                                     //finds the y coordainate with the help of the vertical component of the velocity
