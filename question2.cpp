@@ -7,21 +7,18 @@ int main() {
 
     std::cout << "How many data sets do you have? ";  
     std::cin >> num;                                                                //inputs the number of datasets to be used
+
+    std::cout << "Input the values of velocity, direction and time interval respectively: \n";        
     
     for(int i=0; i<num; i++){
-        
-        std::cout << "Enter the data set "<<i+1<<"\n";                              //notifies the user of the current iteration of data set
     
-        std::cout << "Enter the velocity of the particle: ";                        //gets the value of velocity o=in units/s
-        std::cin >> v;
+        std::cin >> v;                                                              //gets the value of velocity o=in units/s
+            
+        std::cin >> d;                                                              //gets the value of the direction in degrees
+                                
+        std::cin >> t;                                                              //gets the time interval of particle
     
-        std::cout << "Enter the direction of the particle in degrees: ";            //gets the value of the direction in degrees
-        std::cin >> d;
-    
-        std::cout << "Enter the time interval of the particle in seconds: ";        //gets the time interval of particle
-        std::cin >> t;
-    
-        r = d * (M_PI / 180);                                                     //converts degrees into radians
+        r = d * (M_PI / 180);                                                       //converts degrees into radians
     
         x = x + v * cos(r) * t;                                                     //finds the x coordainate with the help of the horizontal component of the velocity
         y = y + v * sin(r) * t;                                                     //finds the y coordainate with the help of the vertical component of the velocity
